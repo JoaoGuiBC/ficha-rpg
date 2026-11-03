@@ -1,0 +1,91 @@
+{
+  "type": "diff",
+  "version": "9",
+  "dialect": "postgres",
+  "id": "da48fcbb-cf07-4b44-90ba-17511930d975",
+  "prevIds": [
+    "8f73cbad-f4bc-4d69-8d27-cb6b6cb075db"
+  ],
+  "footprints": [
+    {
+      "statementType": "add_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "skills",
+        "level"
+      ],
+      "writes": [
+        "s|col|public.skills.level",
+        "n|col|public.skills.level",
+        "e|col|public.skills.level"
+      ],
+      "reads": [
+        "n|tbl|public.skills",
+        "n|sch|public"
+      ]
+    },
+    {
+      "statementType": "drop_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "skills",
+        "description"
+      ],
+      "writes": [
+        "s|col|public.skills.description",
+        "n|col|public.skills.description",
+        "e|col|public.skills.description"
+      ],
+      "reads": [
+        "n|tbl|public.skills",
+        "n|sch|public"
+      ]
+    },
+    {
+      "statementType": "drop_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "skills",
+        "attribute"
+      ],
+      "writes": [
+        "s|col|public.skills.attribute",
+        "n|col|public.skills.attribute",
+        "e|col|public.skills.attribute"
+      ],
+      "reads": [
+        "n|tbl|public.skills",
+        "n|sch|public"
+      ]
+    }
+  ],
+  "deltas": [
+    {
+      "op": "create",
+      "row": {
+        "schema": "public",
+        "table": "skills",
+        "name": "level",
+        "type": "integer",
+        "typeSchema": null,
+        "notNull": true,
+        "dimensions": 0,
+        "default": "5",
+        "generated": null,
+        "identity": null,
+        "entityType": "columns"
+      }
+    },
+    {
+      "op": "drop",
+      "key": "columns\u0000[\"public\",\"skills\",\"description\"]"
+    },
+    {
+      "op": "drop",
+      "key": "columns\u0000[\"public\",\"skills\",\"attribute\"]"
+    }
+  ]
+}

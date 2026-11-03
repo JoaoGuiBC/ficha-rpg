@@ -1,0 +1,117 @@
+[
+    {
+        "name": "acrobacia",
+        "description": "Dar piruetas, manter o equilíbrio em superfícies estreitas e cair de pé.",
+        "attr": ["AGI"]
+    },
+    {
+        "name": "adestramento",
+        "description": "Acalmar feras selvagens, treinar montarias ou entender o comportamento animal.",
+        "attr": ["ESP"]
+    },
+    {
+        "name": "alquimia",
+        "description": "Identificar e misturar substâncias químicas, criar ácidos, bombas de fumaça caseiras ou pólvora inflamável.",
+        "attr": ["INT"]
+    },
+    {
+        "name": "atletismo",
+        "description": "Correr, escalar muros, saltar fossos e nadar contra a correnteza.",
+        "attr": ["FOR"]
+    },
+    {
+        "name": "condução",
+        "description": "Cavalgar em alta velocidade, guiar carroças em perseguições ou pilotar barcos sob tempestades.",
+        "attr": ["AGI"]
+    },
+    {
+        "name": "conjuração",
+        "description": "Canalizar mana e lançar magias com precisão através do grimório ou foco místico.",
+        "attr": ["INT", "ESP"]
+    },
+    {
+        "name": "enganação",
+        "description": "Mentir de forma convincente, falsificar documentos, disfarçar-se de outra pessoa e trapacear em jogos de azar.",
+        "attr": ["ESP"]
+    },
+    {
+        "name": "furtividade",
+        "description": "Esconder-se nas sombras, camuflar-se e andar sem fazer barulho.",
+        "attr": ["AGI"]
+    },
+    {
+        "name": "história",
+        "description": "Lembrar de lendas antigas, árvores genealógicas de reis e heróis do passado pré-eclipse.",
+        "attr": ["INT"]
+    },
+    {
+        "name": "intimidação",
+        "description": "Assustar ou coagir alguém usando sua presença física ou olhar fixo.",
+        "attr": ["FOR", "ESP"]
+    },
+    {
+        "name": "intuição",
+        "description": "Perceber se alguém está mentindo, omitindo informações ou agindo sob coerção.",
+        "attr": ["ESP"]
+    },
+    {
+        "name": "investigação",
+        "description": "Analisar cenas de crime, procurar pistas e encontrar mecanismos ou passagens ocultas.",
+        "attr": ["INT"]
+    },
+    {
+        "name": "luta",
+        "description": "Usar espadas, machados, lanças e combate desarmado.",
+        "attr": ["FOR"]
+    },
+    {
+        "name": "mãos leves",
+        "description": "Abrir cadeados, roubar bolsos, ocultar itens no corpo ou fazer truques de mãos.",
+        "attr": ["AGI"]
+    },
+    {
+        "name": "medicina",
+        "description": "Estabilizar aliados sangrando, diagnosticar doenças e criar antídotos.",
+        "attr": ["INT"]
+    },
+    {
+        "name": "ocultismo",
+        "description": "Entender o funcionamento de rituais, identificar itens mágicos e decifrar runas antigas.",
+        "attr": ["INT", "ESP"]
+    },
+    {
+        "name": "percepção",
+        "description": "Notar inimigos emboscados, ler linguagem corporal ou ouvir barulhos extremamente baixos.",
+        "attr": ["ESP"]
+    },
+    {
+        "name": "persuasão",
+        "description": "Convencer alguém usando diplomacia, charme, bons argumentos ou apelo emocional.",
+        "attr": ["ESP"]
+    },
+    {
+        "name": "pontaria",
+        "description": "Usar arcos, bestas, bestilhas e arremessar facas.",
+        "attr": ["AGI"]
+    },
+    {
+        "name": "religião",
+        "description": "Conhecimento sobre a fé, heresias proibidas e a natureza profana da entidade Vorys.",
+        "attr": ["ESP"]
+    },
+    {
+        "name": "sobrevivência",
+        "description": "Rastrear pegadas, caçar, encontrar água potável e guiar o grupo sem se perder em florestas ou masmorras.",
+        "attr": ["INT"]
+    },
+    {
+        "name": "tolerância",
+        "description": "Resistir a venenos, toxinas, gases asfixiantes, efeitos de álcool e climas extremos.",
+        "attr": ["VIG"]
+    },
+    {
+        "name": "vontade",
+        "description": "Resistir a magias mentais, possessões, pânico, horror e cansaço psicológico extremo.",
+        "attr": ["ESP"]
+    }
+]

@@ -1,0 +1,316 @@
+@import 'tailwindcss';
+
+@layer base {
+    *,
+    ::before,
+    ::after {
+        @apply transition-colors;
+    }
+    body {
+        @apply bg-t50;
+    }
+}
+
+@theme {
+    --font-title: 'Fraunces', serif;
+    --font-body: 'Manrope', sans-serif;
+
+    --font-sans: var(--font-body);
+}
+
+:root {
+    --t50: var(--color-zinc-50);
+    --t100: var(--color-zinc-100);
+    --t200: var(--color-zinc-200);
+    --t300: var(--color-zinc-300);
+    --t400: var(--color-zinc-400);
+    --t500: var(--color-zinc-500);
+    --t600: var(--color-zinc-600);
+    --t700: var(--color-zinc-700);
+    --t800: var(--color-zinc-800);
+    --t900: var(--color-zinc-900);
+
+    --overshoot: linear(
+        0,
+        -0.008 4.1%,
+        -0.035 8.3%,
+        -0.179 21.1%,
+        -0.216 25.3%,
+        -0.228 29.5%,
+        -0.208 33.3%,
+        -0.121 38.2%,
+        0.036 42.7%,
+        0.261 46.8%,
+        0.881 55.6%,
+        1.058 59.7%,
+        1.172 64.1%,
+        1.222 68.6%,
+        1.228 71.1%,
+        1.221 73.7%,
+        1.183 78.5%,
+        1.034 91.8%,
+        1.008 95.9%,
+        1
+    );
+}
+
+@media (max-width: 640px) {
+    :root {
+        font-size: 90%;
+    }
+}
+
+@keyframes dialog-in {
+    from {
+        opacity: 0;
+        scale: 0.85;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes dialog-out {
+    from {
+        opacity: 1;
+        scale: 1;
+    }
+    to {
+        opacity: 0;
+        scale: 0.95;
+    }
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.dialog-overlay[data-state='open'] {
+    animation: fade-in 150ms ease-out;
+}
+.dialog-overlay[data-state='closed'] {
+    animation: fade-out 120ms ease-in forwards;
+}
+
+.dialog-content[data-state='open'] {
+    animation: dialog-in 120ms ease-out; /* fallback sem linear() */
+    animation: dialog-in 300ms var(--overshoot);
+}
+.dialog-content[data-state='closed'] {
+    animation: dialog-out 150ms ease-in forwards;
+}
+
+.toast-content[data-state='open'] {
+    animation: dialog-in 300ms var(--overshoot);
+}
+.toast-content[data-state='closed'] {
+    animation: dialog-out 150ms ease-in forwards;
+}
+
+.popover-content[data-state='open'] {
+    animation: dialog-in 300ms var(--overshoot);
+}
+.popover-content[data-state='closed'] {
+    animation: dialog-out 150ms ease-in forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dialog-overlay,
+    .dialog-content,
+    .toast-content {
+        animation-duration: 1ms !important;
+    }
+}
+
+[data-tint='red'] {
+    --t50: var(--color-red-50);
+    --t100: var(--color-red-100);
+    --t200: var(--color-red-200);
+    --t300: var(--color-red-300);
+    --t400: var(--color-red-400);
+    --t500: var(--color-red-500);
+    --t600: var(--color-red-600);
+    --t700: var(--color-red-700);
+    --t800: var(--color-red-800);
+    --t900: var(--color-red-900);
+}
+
+[data-tint='amber'] {
+    --t50: var(--color-amber-50);
+    --t100: var(--color-amber-100);
+    --t200: var(--color-amber-200);
+    --t300: var(--color-amber-300);
+    --t400: var(--color-amber-400);
+    --t500: var(--color-amber-500);
+    --t600: var(--color-amber-600);
+    --t700: var(--color-amber-700);
+    --t800: var(--color-amber-800);
+    --t900: var(--color-amber-900);
+}
+
+[data-tint='emerald'] {
+    --t50: var(--color-emerald-50);
+    --t100: var(--color-emerald-100);
+    --t200: var(--color-emerald-200);
+    --t300: var(--color-emerald-300);
+    --t400: var(--color-emerald-400);
+    --t500: var(--color-emerald-500);
+    --t600: var(--color-emerald-600);
+    --t700: var(--color-emerald-700);
+    --t800: var(--color-emerald-800);
+    --t900: var(--color-emerald-900);
+}
+
+[data-tint='teal'] {
+    --t50: var(--color-teal-50);
+    --t100: var(--color-teal-100);
+    --t200: var(--color-teal-200);
+    --t300: var(--color-teal-300);
+    --t400: var(--color-teal-400);
+    --t500: var(--color-teal-500);
+    --t600: var(--color-teal-600);
+    --t700: var(--color-teal-700);
+    --t800: var(--color-teal-800);
+    --t900: var(--color-teal-900);
+}
+
+[data-tint='sky'] {
+    --t50: var(--color-sky-50);
+    --t100: var(--color-sky-100);
+    --t200: var(--color-sky-200);
+    --t300: var(--color-sky-300);
+    --t400: var(--color-sky-400);
+    --t500: var(--color-sky-500);
+    --t600: var(--color-sky-600);
+    --t700: var(--color-sky-700);
+    --t800: var(--color-sky-800);
+    --t900: var(--color-sky-900);
+}
+
+[data-tint='blue'] {
+    --t50: var(--color-blue-50);
+    --t100: var(--color-blue-100);
+    --t200: var(--color-blue-200);
+    --t300: var(--color-blue-300);
+    --t400: var(--color-blue-400);
+    --t500: var(--color-blue-500);
+    --t600: var(--color-blue-600);
+    --t700: var(--color-blue-700);
+    --t800: var(--color-blue-800);
+    --t900: var(--color-blue-900);
+}
+
+[data-tint='violet'] {
+    --t50: var(--color-violet-50);
+    --t100: var(--color-violet-100);
+    --t200: var(--color-violet-200);
+    --t300: var(--color-violet-300);
+    --t400: var(--color-violet-400);
+    --t500: var(--color-violet-500);
+    --t600: var(--color-violet-600);
+    --t700: var(--color-violet-700);
+    --t800: var(--color-violet-800);
+    --t900: var(--color-violet-900);
+}
+
+[data-tint='indigo'] {
+    --t50: var(--color-indigo-50);
+    --t100: var(--color-indigo-100);
+    --t200: var(--color-indigo-200);
+    --t300: var(--color-indigo-300);
+    --t400: var(--color-indigo-400);
+    --t500: var(--color-indigo-500);
+    --t600: var(--color-indigo-600);
+    --t700: var(--color-indigo-700);
+    --t800: var(--color-indigo-800);
+    --t900: var(--color-indigo-900);
+}
+
+[data-tint='pink'] {
+    --t50: var(--color-pink-50);
+    --t100: var(--color-pink-100);
+    --t200: var(--color-pink-200);
+    --t300: var(--color-pink-300);
+    --t400: var(--color-pink-400);
+    --t500: var(--color-pink-500);
+    --t600: var(--color-pink-600);
+    --t700: var(--color-pink-700);
+    --t800: var(--color-pink-800);
+    --t900: var(--color-pink-900);
+}
+
+@supports (color: oklch(from red l c h)) {
+    [data-tint='slate'] {
+        --boost: 2;
+    }
+    [data-tint='olive'] {
+        --boost: 2.5;
+    }
+    [data-tint='mauve'] {
+        --boost: 3.5;
+    }
+
+    [data-tint='slate'] {
+        --t50: oklch(from var(--color-slate-50) l calc(c * var(--boost)) h);
+        --t100: oklch(from var(--color-slate-100) l calc(c * var(--boost)) h);
+        --t200: oklch(from var(--color-slate-200) l calc(c * var(--boost)) h);
+        --t300: oklch(from var(--color-slate-300) l calc(c * var(--boost)) h);
+        --t400: oklch(from var(--color-slate-400) l calc(c * var(--boost)) h);
+        --t500: oklch(from var(--color-slate-500) l calc(c * var(--boost)) h);
+        --t600: oklch(from var(--color-slate-600) l calc(c * var(--boost)) h);
+        --t700: oklch(from var(--color-slate-700) l calc(c * var(--boost)) h);
+        --t800: oklch(from var(--color-slate-800) l calc(c * var(--boost)) h);
+        --t900: oklch(from var(--color-slate-900) l calc(c * var(--boost)) h);
+    }
+
+    [data-tint='mauve'] {
+        --t50: oklch(from var(--color-mauve-50) l calc(c * var(--boost)) h);
+        --t100: oklch(from var(--color-mauve-100) l calc(c * var(--boost)) h);
+        --t200: oklch(from var(--color-mauve-200) l calc(c * var(--boost)) h);
+        --t300: oklch(from var(--color-mauve-300) l calc(c * var(--boost)) h);
+        --t400: oklch(from var(--color-mauve-400) l calc(c * var(--boost)) h);
+        --t500: oklch(from var(--color-mauve-500) l calc(c * var(--boost)) h);
+        --t600: oklch(from var(--color-mauve-600) l calc(c * var(--boost)) h);
+        --t700: oklch(from var(--color-mauve-700) l calc(c * var(--boost)) h);
+        --t800: oklch(from var(--color-mauve-800) l calc(c * var(--boost)) h);
+        --t900: oklch(from var(--color-mauve-900) l calc(c * var(--boost)) h);
+    }
+
+    [data-tint='olive'] {
+        --t50: oklch(from var(--color-olive-50) l calc(c * var(--boost)) h);
+        --t100: oklch(from var(--color-olive-100) l calc(c * var(--boost)) h);
+        --t200: oklch(from var(--color-olive-200) l calc(c * var(--boost)) h);
+        --t300: oklch(from var(--color-olive-300) l calc(c * var(--boost)) h);
+        --t400: oklch(from var(--color-olive-400) l calc(c * var(--boost)) h);
+        --t500: oklch(from var(--color-olive-500) l calc(c * var(--boost)) h);
+        --t600: oklch(from var(--color-olive-600) l calc(c * var(--boost)) h);
+        --t700: oklch(from var(--color-olive-700) l calc(c * var(--boost)) h);
+        --t800: oklch(from var(--color-olive-800) l calc(c * var(--boost)) h);
+        --t900: oklch(from var(--color-olive-900) l calc(c * var(--boost)) h);
+    }
+}
+
+@theme inline {
+    --color-t50: var(--t50);
+    --color-t100: var(--t100);
+    --color-t200: var(--t200);
+    --color-t300: var(--t300);
+    --color-t400: var(--t400);
+    --color-t500: var(--t500);
+    --color-t600: var(--t600);
+    --color-t700: var(--t700);
+    --color-t800: var(--t800);
+    --color-t900: var(--t900);
+}

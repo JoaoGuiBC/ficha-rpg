@@ -1,0 +1,1 @@
+ALTER TABLE "skills" ALTER COLUMN "character_id" SET NOT NULL;

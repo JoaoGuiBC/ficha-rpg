@@ -1,0 +1,1 @@
+ALTER TABLE "items" ALTER COLUMN "character_id" SET NOT NULL;

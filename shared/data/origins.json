@@ -1,0 +1,34 @@
+[
+    {
+        "name": "nobreza",
+        "ability": "Influência Social - começa com 100 Moedas de Ouro extras; guardas dão passagem e nobres aceitam conversar mais facilmente"
+    },
+    {
+        "name": "acólito",
+        "ability": "Foco Espiritual - em descansos curtos (1 hora), recupera +5 de Mana a mais que o normal"
+    },
+    {
+        "name": "errante",
+        "ability": "Pés de Andarilho - nunca se cansa em viagens longas"
+    },
+    {
+        "name": "artesão",
+        "ability": "Mãos de Mestre - conserta equipamentos danificados ou cria ferramentas simples (tochas, cordas, gazuas) usando apenas sucata do cenário"
+    },
+    {
+        "name": "militar",
+        "ability": "Treino de Armadura - ignora penalidades de peso e movimento de armaduras pesadas; a Defesa fica sempre no valor máximo"
+    },
+    {
+        "name": "erudito",
+        "ability": "Mente Expandida - começa o jogo sabendo 1 Magia adicional de qualquer natureza"
+    },
+    {
+        "name": "criminoso",
+        "ability": "Contatos do Submundo - sabe onde encontrar mercados negros e itens ilegais em qualquer cidade, além de facilidade para obter informações proibidas"
+    },
+    {
+        "name": "rústico",
+        "ability": "Corpo Calejado - recebe +5 de Vida Máxima permanente e consegue erguer ou carregar itens pesados sem testes"
+    }
+]

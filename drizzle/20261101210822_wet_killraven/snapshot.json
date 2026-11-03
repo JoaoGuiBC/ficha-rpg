@@ -1,0 +1,40 @@
+{
+  "type": "diff",
+  "version": "9",
+  "dialect": "postgres",
+  "id": "87d78937-04a3-4b18-a733-c892b02edb44",
+  "prevIds": [
+    "88705395-edc9-409f-bf9d-3e957ace240d"
+  ],
+  "footprints": [
+    {
+      "statementType": "alter_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "items",
+        "rarity"
+      ],
+      "writes": [
+        "s|colprop|public.items.rarity.notNull",
+        "s|colprop|public.items.rarity.default"
+      ],
+      "reads": [
+        "n|tbl|public.items",
+        "n|sch|public",
+        "n|col|public.items.rarity"
+      ],
+      "sqlHash": "fffbba00a5f2f21a"
+    }
+  ],
+  "deltas": [
+    {
+      "op": "alter",
+      "key": "columns\u0000[\"public\",\"items\",\"rarity\"]",
+      "set": {
+        "notNull": false,
+        "default": null
+      }
+    }
+  ]
+}

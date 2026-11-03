@@ -1,0 +1,38 @@
+{
+  "type": "diff",
+  "version": "9",
+  "dialect": "postgres",
+  "id": "521dbd81-2e56-4f5d-8e83-ed6f5d47ab26",
+  "prevIds": [
+    "da48fcbb-cf07-4b44-90ba-17511930d975"
+  ],
+  "footprints": [
+    {
+      "statementType": "alter_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "skills",
+        "character_id"
+      ],
+      "writes": [
+        "s|colprop|public.skills.character_id.notNull"
+      ],
+      "reads": [
+        "n|tbl|public.skills",
+        "n|sch|public",
+        "n|col|public.skills.character_id"
+      ],
+      "sqlHash": "a606199e40249753"
+    }
+  ],
+  "deltas": [
+    {
+      "op": "alter",
+      "key": "columns\u0000[\"public\",\"skills\",\"character_id\"]",
+      "set": {
+        "notNull": true
+      }
+    }
+  ]
+}
