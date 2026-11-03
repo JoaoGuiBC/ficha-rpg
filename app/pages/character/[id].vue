@@ -4,11 +4,16 @@ import { useToastManager } from 'reka-ui'
 const route = useRoute()
 const toast = useToastManager()
 const characterStore = useCharacterStore()
+const { character } = storeToRefs(characterStore)
 const { getSheet } = useCharacter()
 const { isNewCharacterDialogOpen } = useDialogs()
 
 let differencesTimer: ReturnType<typeof setInterval> | undefined
 let isApplyingDifferences = false
+
+useHead({
+    title: () => capitalizeAllWords(character.value.name) || 'Ficha',
+})
 
 async function applyDifferences() {
     if (isApplyingDifferences) return

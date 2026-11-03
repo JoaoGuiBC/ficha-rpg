@@ -6,6 +6,7 @@ useHead({
     htmlAttrs: {
         'data-tint': '',
     },
+    title: 'Ficha',
 })
 
 const isLoading = ref(true)
